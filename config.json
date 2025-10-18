@@ -1,0 +1,124 @@
+{
+    "app": {
+        "title": "Multi-Language Historical Text Extractor",
+        "description": "Extract text from images containing ancient, historical, and modern languages",
+        "version": "1.0.0",
+        "author": "AI Assistant"
+    },
+    "ocr": {
+        "engine": "tesseract",
+        "default_languages": [
+            "eng",
+            "hin",
+            "san"
+        ],
+        "max_image_size_mb": 100,
+        "supported_formats": [
+            "jpg",
+            "jpeg",
+            "png",
+            "bmp",
+            "tiff"
+        ],
+        "preprocessing": {
+            "enabled_by_default": true,
+            "default_contrast": 1.0,
+            "default_brightness": 0,
+            "default_threshold": 127,
+            "default_scale": 1
+        }
+    },
+    "historical_languages": {
+        "ancient_indian": {
+            "indo_aryan": [
+                "Vedic Sanskrit",
+                "Classical Sanskrit",
+                "Pali",
+                "Prakrits",
+                "Apabhraṃśa"
+            ],
+            "dravidian": [
+                "Old Tamil",
+                "Old Kannada",
+                "Old Telugu",
+                "Old Malayalam"
+            ]
+        },
+        "ancient_asian": [
+            "Classical Tibetan",
+            "Classical Chinese",
+            "Old Sinhala",
+            "Khmer",
+            "Mon"
+        ],
+        "ancient_european": [
+            "Latin",
+            "Ancient Greek",
+            "Gothic",
+            "Old Norse",
+            "Old English",
+            "Old High German"
+        ],
+        "middle_eastern": [
+            "Hebrew",
+            "Aramaic",
+            "Syriac",
+            "Old Persian",
+            "Avestan"
+        ],
+        "other_ancient": [
+            "Ge'ez (Ethiopic)",
+            "Egyptian Hieroglyphs",
+            "Cuneiform"
+        ]
+    },
+    "language_support": {
+        "100_languages": true,
+        "priority_languages": [
+            "Sanskrit",
+            "Pali",
+            "Tamil",
+            "Kannada",
+            "Telugu",
+            "Malayalam",
+            "Latin",
+            "Greek",
+            "Hebrew",
+            "Arabic",
+            "Chinese",
+            "Japanese",
+            "English"
+        ]
+    },
+    "ui": {
+        "layout": "wide",
+        "theme": "light",
+        "language_categories": [
+            "Ancient Indian - Indo-Aryan",
+            "Ancient Indian - Dravidian",
+            "Classical Asian",
+            "Modern Indian",
+            "Ancient European",
+            "Ancient Middle-Eastern",
+            "Ancient African",
+            "European",
+            "Southeast Asian"
+        ]
+    },
+    "performance": {
+        "parallel_processing": false,
+        "batch_size": 1,
+        "timeout_seconds": 300,
+        "cache_results": true
+    },
+    "export": {
+        "formats": [
+            "txt",
+            "json",
+            "csv"
+        ],
+        "include_metadata": true,
+        "include_confidence": true,
+        "include_timestamp": true
+    }
+}
