@@ -48,7 +48,7 @@ env/
 
 # Streamlit
 .streamlit/secrets.toml
-.streamlit/config.toml
+# Note: config.toml is needed for deployment, so NOT ignored
 
 # Uploaded files and outputs
 uploads/
@@ -61,9 +61,13 @@ outputs/
 *.tiff
 *.pdf
 
-# Extracted text files
-*.txt
+# Extracted text files (output files only)
+extracted_*.txt
+output_*.txt
+result_*.txt
+# Note: Keep requirements.txt and packages.txt for deployment
 !requirements.txt
+!packages.txt
 *.json
 !config.json
 
